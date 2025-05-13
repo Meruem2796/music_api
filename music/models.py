@@ -29,3 +29,6 @@ class Song(models.Model):
         Album, on_delete=models.CASCADE
     )  # Album the song belongs to
     duration = models.IntegerField()  # Duration of the song in seconds
+
+    def __str__(self):
+        return f"{self.title} - {self.artist} - {self.album}"
